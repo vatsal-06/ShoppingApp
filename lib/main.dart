@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.black),
         ),
       ),
-      home: ProductDetailsPage(product: products[0],),
+      home: const HomePage(),
     );
   }
 }
