@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage> {
           ]),
       body: IndexedStack(
         index: currentPage,
-        children: pages,
       ),
     );
   }
