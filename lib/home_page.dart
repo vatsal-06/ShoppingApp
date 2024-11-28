@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: ''),
           ]),
-      body: ProductList(),
+      body: pages[currentPage],
     );
   }
 }
