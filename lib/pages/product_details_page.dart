@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cart_provider.dart';
+import '../providers/cart_provider.dart';
 import 'package:provider/provider.dart';
 
 class ProductDetailsPage extends StatefulWidget {
@@ -61,6 +61,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             padding: const EdgeInsets.all(16.0),
             child: Image.asset(
               widget.product['imageUrl'] as String,
+              height: 250,
             ),
           ),
           const Spacer(
@@ -115,8 +116,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 ElevatedButton(
                   onPressed: onTap,
                   style: ButtonStyle(
-                    minimumSize: WidgetStateProperty.all(
-                        const Size(double.infinity, 50)),
+                    fixedSize: WidgetStateProperty.all(
+                        const Size(350, 50)),
                     backgroundColor:
                         WidgetStateProperty.all(Theme.of(context).primaryColor),
                     padding: WidgetStateProperty.all(
