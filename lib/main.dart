@@ -46,7 +46,6 @@ class MyApp extends StatelessWidget {
           ),
           home: Provider(create: (context) => 'Hello!', child: const HomePage()),
         ),
-      ),
     );
   }
 }
