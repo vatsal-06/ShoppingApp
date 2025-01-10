@@ -7,7 +7,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cart = Provider.of<CartProvider>(context).cart;
+    final cart = context.watch<CartProvider>().cart;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cart'),
@@ -29,22 +29,34 @@ class CartPage extends StatelessWidget {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Delete Product', style: Theme.of(context).textTheme.titleMedium,),
+                          title: Text(
+                            'Delete Product',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
                           content: const Text('Are you sure?'),
                           actions: [
                             TextButton(
                               onPressed: () {
                                 Navigator.of(context).pop();
                               },
-                              child: const Text('No', style: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold),),
+                              child: const Text(
+                                'No',
+                                style: TextStyle(
+                                    color: Colors.blueAccent,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                             TextButton(
                               onPressed: () {
-                                Provider.of<CartProvider>(context, listen: false)
-                                    .removeProduct(cartItem);
+                                context.read<CartProvider>().removeProduct(cartItem);
                                 Navigator.of(context).pop();
                               },
-                              child: const Text('Yes', style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),),
+                              child: const Text(
+                                'Yes',
+                                style: TextStyle(
+                                    color: Colors.redAccent,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ],
                         );
