@@ -97,7 +97,7 @@ class _ProductListState extends State<ProductList> {
 
           Expanded(
             child: LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxWidth > 650) {
+              if (constraints.maxWidth > 1080) {
                 return GridView.builder(
                     itemCount: products.length,
                     gridDelegate:
