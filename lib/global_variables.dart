@@ -3,7 +3,7 @@ final products = [
     'id': '0',
     'title': 'Men\'s Nike Shoes',
     'price': 44.52,
-    'imageUrl': 'assets/images/shoes_1.png',
+    'imageUrl': './assets/images/shoes_1.png',
     'company': 'Nike',
     'sizes': [9, 10, 11, 12],
   },
@@ -11,7 +11,7 @@ final products = [
     'id': '1',
     'title': 'Addidas Shoes',
     'price': 20.12,
-    'imageUrl': 'assets/images/shoes_2.png',
+    'imageUrl': './assets/images/shoes_2.png',
     'company': 'Addidas',
     'sizes': [9, 10, 12],
   },
@@ -19,7 +19,7 @@ final products = [
     'id': '2',
     'title': 'Bata Women\'s Shoes',
     'price': 28.95,
-    'imageUrl': 'assets/images/shoes_3.png',
+    'imageUrl': './assets/images/shoes_3.png',
     'company': 'Bata',
     'sizes': [8, 9, 10],
   },
@@ -27,19 +27,8 @@ final products = [
     'id': '3',
     'title': 'Jordan Shoes',
     'price': 420.69,
-    'imageUrl': 'assets/images/shoes_4.png',
+    'imageUrl': './assets/images/shoes_4.png',
     'company': 'Nike',
     'sizes': [8, 9, 10],
-  },
-];
-
-final cart = [
-  {
-    'id': 3,
-    'title': 'Jordan 1 Retro High OG',
-    'price': 40.50,
-    'ImageUrl': 'assets/images/shoes_4.png',
-    'size': '6',
-    'company': 'Nike',
   },
 ];

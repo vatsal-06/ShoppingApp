@@ -22,6 +22,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
+        selectedFontSize: 0,
+        unselectedFontSize: 0,
           onTap: (value) {
             setState(() {
               currentPage = value;
